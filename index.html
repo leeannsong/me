@@ -1,0 +1,438 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Luminous Living with Lee Ann — Yoga, Massage & Holistic Wellness</title>
+  <meta name="description" content="Private yoga, therapeutic massage, and group wellness workshops with Lee Ann in Somerville, MA. A holistic approach to feeling healthy, present, and easeful." />
+  <meta property="og:title" content="Luminous Living with Lee Ann" />
+  <meta property="og:description" content="Private yoga, therapeutic massage, and group wellness workshops with Lee Ann." />
+  <meta property="og:image" content="hero.jpg" />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="icon" type="image/png" href="logo.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Inter:wght@300;400;500;600&display=swap" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    :root {
+      --background: oklch(0.985 0.012 85);
+      --foreground: oklch(0.24 0.05 300);
+      --card: oklch(0.98 0.015 80);
+      --primary: oklch(0.45 0.17 300);
+      --muted-foreground: oklch(0.45 0.04 290);
+      --border: oklch(0.88 0.03 290);
+      --ring: oklch(0.6 0.15 300);
+      --gold: oklch(0.78 0.16 55);
+      --gold-soft: oklch(0.92 0.07 60);
+      --plum: oklch(0.45 0.17 300);
+      --plum-soft: oklch(0.88 0.07 300);
+      --moss: oklch(0.55 0.13 150);
+      --moss-soft: oklch(0.88 0.07 145);
+      --gradient-luminous: linear-gradient(135deg, oklch(0.85 0.12 300) 0%, oklch(0.85 0.14 55) 55%, oklch(0.82 0.13 150) 100%);
+      --shadow-soft: 0 20px 60px -20px oklch(0.45 0.17 300 / 0.22);
+      --shadow-glow: 0 0 80px -10px oklch(0.78 0.16 55 / 0.45);
+    }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--background);
+      color: var(--foreground);
+      font-family: "Inter", ui-sans-serif, system-ui, sans-serif;
+    }
+    h1, h2, h3, h4, .font-serif {
+      font-family: "Cormorant Garamond", Georgia, serif;
+      font-weight: 400;
+      letter-spacing: -0.01em;
+    }
+    .text-primary { color: var(--primary); }
+    .text-foreground { color: var(--foreground); }
+    .text-muted-foreground { color: var(--muted-foreground); }
+    .bg-background { background: var(--background); }
+    .bg-card { background: var(--card); }
+    .bg-foreground { background: var(--foreground); }
+    .text-background { color: var(--background); }
+    .border-border { border-color: var(--border); }
+    .bg-plum { background: var(--plum); }
+    .bg-plum-soft { background: var(--plum-soft); }
+    .bg-gold { background: var(--gold); }
+    .bg-gold-soft { background: var(--gold-soft); }
+    .bg-moss { background: var(--moss); }
+    .bg-moss-soft { background: var(--moss-soft); }
+    .bg-luminous { background-image: var(--gradient-luminous); }
+    .shadow-soft { box-shadow: var(--shadow-soft); }
+    .shadow-glow { box-shadow: var(--shadow-glow); }
+    .input {
+      width: 100%; background: transparent;
+      border: 1px solid var(--border); border-radius: 0.75rem;
+      padding: 0.75rem 1rem; font-size: 0.95rem; color: var(--foreground);
+      outline: none; transition: border-color .2s, box-shadow .2s;
+    }
+    .input:focus { border-color: var(--ring); box-shadow: 0 0 0 4px oklch(0.85 0.08 75 / 0.25); }
+    .input::placeholder { color: var(--muted-foreground); opacity: .7; }
+    /* Reserve top space so smooth-scroll anchors land below the sticky nav */
+    section[id] { scroll-margin-top: 6rem; }
+  </style>
+</head>
+<body>
+
+<!-- Nav -->
+<header class="sticky top-0 z-40 backdrop-blur-md bg-[color:var(--background)]/70 border-b border-[color:var(--border)]/60">
+  <div class="mx-auto max-w-6xl px-6 py-5 flex items-center justify-between">
+    <a href="#home" class="flex items-center gap-3 group" aria-label="Luminous Living with Lee Ann — Home">
+      <img src="logo.png" alt="Luminous Living with Lee Ann"
+           class="h-20 w-20 md:h-24 md:w-24 rounded-full object-cover shadow-glow transition-transform group-hover:scale-105" />
+    </a>
+    <nav class="hidden md:flex items-center gap-8 text-sm">
+      <a href="#home" class="text-muted-foreground hover:text-foreground transition-colors">Home</a>
+      <a href="#about" class="text-muted-foreground hover:text-foreground transition-colors">About</a>
+      <a href="#services" class="text-muted-foreground hover:text-foreground transition-colors">Services</a>
+      <a href="#contact" class="text-muted-foreground hover:text-foreground transition-colors">Contact</a>
+    </nav>
+    <a href="#contact" class="hidden md:inline-flex items-center rounded-full bg-foreground text-background px-5 py-2 text-sm hover:opacity-90 transition">
+      Book a session
+    </a>
+  </div>
+  <nav class="md:hidden flex items-center justify-center gap-6 pb-4 text-sm">
+    <a href="#home" class="text-muted-foreground">Home</a>
+    <a href="#about" class="text-muted-foreground">About</a>
+    <a href="#services" class="text-muted-foreground">Services</a>
+    <a href="#contact" class="text-muted-foreground">Contact</a>
+  </nav>
+</header>
+
+<main class="flex-1">
+
+<!-- Hero -->
+<section id="home" class="relative overflow-hidden">
+  <div class="absolute inset-0 -z-10">
+    <img src="hero.jpg" alt="Lee Ann practicing yoga at the beach at sunrise" class="h-full w-full object-cover" width="1920" height="1280" />
+    <div class="absolute inset-0 bg-gradient-to-r from-[color:var(--background)]/85 via-[color:var(--background)]/55 to-[color:var(--background)]/20"></div>
+    <div class="absolute inset-0 bg-gradient-to-t from-[color:var(--background)] via-[color:var(--background)]/30 to-transparent"></div>
+  </div>
+  <div class="mx-auto max-w-6xl px-6 pt-24 pb-40 md:pt-36 md:pb-56">
+    <p class="text-sm uppercase tracking-[0.25em] text-primary">Yoga · Massage · Holistic Wellness</p>
+    <h1 class="mt-6 font-serif text-5xl md:text-7xl leading-[1.05] max-w-3xl text-foreground drop-shadow-sm">
+      Welcome to <em class="text-primary">Luminous Living</em> with Lee Ann.
+    </h1>
+    <p class="mt-6 max-w-2xl text-lg" style="color: color-mix(in oklab, var(--foreground) 85%, transparent)">
+      I'm Lee Ann, and I'm here to empower you to live well. Through a holistic approach that blends movement, nourishment, and creative expression, I walk alongside you to discover new ways to feel healthy, authentic, present, and easeful.
+    </p>
+    <div class="mt-10 flex flex-wrap gap-3">
+      <a href="#contact" class="rounded-full bg-foreground text-background px-7 py-3 text-sm hover:opacity-90 transition">Book a session</a>
+      <a href="#services" class="rounded-full border border-[color:var(--foreground)]/30 px-7 py-3 text-sm hover:bg-[color:var(--foreground)]/5 transition">Explore offerings</a>
+    </div>
+  </div>
+</section>
+
+<!-- Mission -->
+<section class="mx-auto max-w-4xl px-6 py-24 text-center">
+  <p class="text-sm uppercase tracking-[0.25em]" style="color: color-mix(in oklab, var(--primary) 80%, transparent)">My Mission</p>
+  <p class="mt-6 font-serif text-2xl md:text-3xl leading-snug" style="color: color-mix(in oklab, var(--foreground) 90%, transparent)">
+    I provide massage therapy and yoga instruction to help you find relief from pain, stress, and tension — and to help you feel better and move through life more comfortably.
+  </p>
+  <p class="mt-6 text-muted-foreground max-w-2xl mx-auto">
+    I combine skilled technique with genuine care, creating a safe space where you can truly relax and heal. When you choose my work, you're choosing someone who listens to your body's needs and is committed to your wellness.
+  </p>
+</section>
+
+<!-- Pillars -->
+<section class="mx-auto max-w-6xl px-6 py-12">
+  <div class="grid md:grid-cols-3 gap-8">
+    <div class="rounded-2xl bg-card p-8 shadow-soft hover:-translate-y-1 transition">
+      <div class="h-10 w-10 rounded-full bg-plum-soft mb-6"></div>
+      <h3 class="font-serif text-2xl">Mindful Movement</h3>
+      <p class="mt-3 text-muted-foreground leading-relaxed">Yoga and breathwork shaped to your body and your season of life.</p>
+    </div>
+    <div class="rounded-2xl bg-card p-8 shadow-soft hover:-translate-y-1 transition">
+      <div class="h-10 w-10 rounded-full bg-gold-soft mb-6"></div>
+      <h3 class="font-serif text-2xl">Compassionate Touch</h3>
+      <p class="mt-3 text-muted-foreground leading-relaxed">Therapeutic massage that meets pain, stress, and held tension with skill and care.</p>
+    </div>
+    <div class="rounded-2xl bg-card p-8 shadow-soft hover:-translate-y-1 transition">
+      <div class="h-10 w-10 rounded-full bg-moss-soft mb-6"></div>
+      <h3 class="font-serif text-2xl">Authentic Connection</h3>
+      <p class="mt-3 text-muted-foreground leading-relaxed">Workshops and circles for nourishment, creative expression, and community.</p>
+    </div>
+  </div>
+</section>
+
+<!-- About -->
+<section id="about" class="mx-auto max-w-6xl px-6 py-24">
+  <div class="grid md:grid-cols-5 gap-12 items-start">
+    <div class="md:col-span-2 md:sticky md:top-28">
+      <div class="relative">
+        <div class="absolute -inset-4 rounded-3xl bg-luminous -z-10 blur-2xl opacity-60"></div>
+        <img src="lee-ann.jpg" alt="Lee Ann, holistic wellness practitioner"
+             width="1024" height="1280" loading="lazy"
+             class="rounded-3xl object-cover w-full aspect-[4/5] shadow-soft" />
+      </div>
+      <div class="mt-8 grid grid-cols-1 gap-4">
+        <div class="border-t border-border pt-3">
+          <div class="text-xs uppercase tracking-widest text-muted-foreground">Training</div>
+          <div class="mt-1 font-serif text-lg">200-hr YTT · Yoga of Energy Flow</div>
+        </div>
+        <div class="border-t border-border pt-3">
+          <div class="text-xs uppercase tracking-widest text-muted-foreground">In progress</div>
+          <div class="mt-1 font-serif text-lg">Licensed Massage Therapist</div>
+        </div>
+        <div class="border-t border-border pt-3">
+          <div class="text-xs uppercase tracking-widest text-muted-foreground">Background</div>
+          <div class="mt-1 font-serif text-lg">BA Neuroscience, Harvard · Culinary Arts, BU</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="md:col-span-3">
+      <p class="text-sm uppercase tracking-[0.25em]" style="color: color-mix(in oklab, var(--primary) 80%, transparent)">About Me</p>
+      <h2 class="mt-4 font-serif text-5xl md:text-6xl leading-[1.05]">Hi, I'm Lee Ann.</h2>
+
+      <div class="mt-8 space-y-5 text-lg leading-relaxed" style="color: color-mix(in oklab, var(--foreground) 85%, transparent)">
+        <p>I offer a range of holistic wellness practices. Drawing from my diverse background in neuroscience, culinary arts, yoga, massage, and traditional healing practices, I create personalized experiences that honor your unique path to wellness.</p>
+        <p>I've never been happy doing just one thing. Growing up, I spent most of my time studying or practicing piano and cello with my dad, who was a professional cellist and music teacher. I also went with my mom to the holistic health clinic where she worked and watched them do miraculous healing through acupuncture, reiki, kinesiology, and music therapy.</p>
+
+        <div id="about-more" class="hidden space-y-5">
+          <p>I thought I wanted to be a global public health doctor and musician because that was what everyone expected of me. For a long time, I lived for validation: I earned good grades, got into Harvard, majored in Neuroscience and did the pre-med track, played in the elite orchestra — and quite literally made myself sick with stress and anxiety.</p>
+          <p>Burnt out after college, I took a gap year in South America on a Michael C. Rockefeller Fellowship. I wanted to learn how to improvise — musically and in life — and to heal my relationship with my own mind and body. I started learning Jazz after a lifetime of Classical training; I practiced yoga, martial arts, and lifting weights every day in Argentina; I learned salsa, bachata, and Brazilian forró; I taught music to students in Lima; I studied plant medicine teachers in the Sacred Valley of Peru, hiked the Patagonias, began cooking in earnest, and made friends who taught me how healing affection and compassionate touch could be.</p>
+          <p>As a recovering perfectionist and people-pleaser, I have experienced my share of debilitating anxiety and depression. In searching for ways to let go of fear and inhibition, I discovered that yoga, massage, music, dance, and compassionate touch helped me feel more expressive, curious, and deeply connected.</p>
+          <p>In the last decade I completed a culinary arts certificate from Boston University, earned my 200-hour Yoga Teacher Training Certification from Yoga of Energy Flow, and I'm currently training to become a licensed massage therapist. Because these practices have changed my life, I feel called to share what I've learned and help others toward holistic wellness through mindful movement, compassionate touch, and authentic connection.</p>
+          <p>I am dedicated to providing personalized, compassionate care that addresses each client's unique physical and emotional needs. True healing happens when we approach our bodies and minds with curiosity rather than judgment — when we embrace both our vulnerabilities and strengths as stepping stones to growth.</p>
+          <p class="text-foreground font-medium">Through private yoga, therapeutic massage, and group wellness workshops, I aim to help you cultivate a deeper relationship with yourself while building meaningful connections with others.</p>
+        </div>
+
+        <button id="about-toggle" type="button"
+          class="mt-2 inline-flex items-center gap-2 rounded-full border border-[color:var(--foreground)]/30 px-5 py-2 text-sm hover:bg-[color:var(--foreground)]/5 transition">
+          <span data-label-more>Read more</span>
+          <span data-label-less class="hidden">Show less</span>
+          <span aria-hidden="true">→</span>
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Services -->
+<section id="services" class="mx-auto max-w-6xl px-6 py-24">
+  <div class="max-w-2xl">
+    <p class="text-sm uppercase tracking-[0.25em]" style="color: color-mix(in oklab, var(--primary) 80%, transparent)">Ways to work together</p>
+    <h2 class="mt-4 font-serif text-5xl md:text-6xl leading-[1.05]">Yoga, massage, and gatherings — shaped around you.</h2>
+    <p class="mt-6 text-lg text-muted-foreground">
+      Every offering rests on the same belief: that healing happens when we approach our bodies and minds with curiosity rather than judgment. Pricing is honest and inclusive of all materials.
+    </p>
+  </div>
+
+  <!-- Private Yoga -->
+  <div class="mt-20">
+    <div class="flex items-center gap-3">
+      <span class="h-2.5 w-2.5 rounded-full bg-plum"></span>
+      <p class="text-xs uppercase tracking-[0.25em] text-muted-foreground">One-on-one practice</p>
+    </div>
+    <h3 class="mt-2 font-serif text-3xl md:text-4xl">Private Yoga</h3>
+    <div class="mt-8 grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <article class="flex flex-col rounded-3xl border border-border bg-card p-7 hover:shadow-soft transition">
+        <span class="self-start text-xs uppercase tracking-widest rounded-full px-3 py-1 bg-plum-soft text-foreground">60 min</span>
+        <h4 class="mt-5 font-serif text-2xl leading-tight">Private Yoga · Single Session</h4>
+        <div class="mt-3 font-medium" style="color: color-mix(in oklab, var(--foreground) 85%, transparent)">$95</div>
+        <div class="text-sm text-muted-foreground">60 min · in-home or studio</div>
+        <p class="mt-5 leading-relaxed" style="color: color-mix(in oklab, var(--foreground) 80%, transparent)">A one-on-one practice shaped entirely around your body, breath, and goals — whether that's mobility, stress relief, or beginning a sustainable home practice.</p>
+        <ul class="mt-5 space-y-2">
+          <li class="flex gap-3 text-sm" style="color: color-mix(in oklab, var(--foreground) 80%, transparent)"><span class="mt-1.5 h-1.5 w-1.5 rounded-full bg-plum flex-shrink-0"></span>Personalized sequence</li>
+          <li class="flex gap-3 text-sm" style="color: color-mix(in oklab, var(--foreground) 80%, transparent)"><span class="mt-1.5 h-1.5 w-1.5 rounded-full bg-plum flex-shrink-0"></span>Breathwork & relaxation</li>
+          <li class="flex gap-3 text-sm" style="color: color-mix(in oklab, var(--foreground) 80%, transparent)"><span class="mt-1.5 h-1.5 w-1.5 rounded-full bg-plum flex-shrink-0"></span>Written practice notes to take home</li>
+        </ul>
+      </article>
+      <article class="flex flex-col rounded-3xl border border-border bg-card p-7 hover:shadow-soft transition">
+        <span class="self-start text-xs uppercase tracking-widest rounded-full px-3 py-1 bg-plum-soft text-foreground">Four 60-min sessions</span>
+        <h4 class="mt-5 font-serif text-2xl leading-tight">Private Yoga · 4-Session Series</h4>
+        <div class="mt-3 font-medium" style="color: color-mix(in oklab, var(--foreground) 85%, transparent)">$340</div>
+        <div class="text-sm text-muted-foreground">Four 60-min sessions · save $40</div>
+        <p class="mt-5 leading-relaxed" style="color: color-mix(in oklab, var(--foreground) 80%, transparent)">A focused arc to build a real practice. We refine alignment, breath, and a short daily routine you'll actually do.</p>
+        <ul class="mt-5 space-y-2">
+          <li class="flex gap-3 text-sm" style="color: color-mix(in oklab, var(--foreground) 80%, transparent)"><span class="mt-1.5 h-1.5 w-1.5 rounded-full bg-plum flex-shrink-0"></span>Intake conversation</li>
+          <li class="flex gap-3 text-sm" style="color: color-mix(in oklab, var(--foreground) 80%, transparent)"><span class="mt-1.5 h-1.5 w-1.5 rounded-full bg-plum flex-shrink-0"></span>Progressive sequencing</li>
+          <li class="flex gap-3 text-sm" style="color: color-mix(in oklab, var(--foreground) 80%, transparent)"><span class="mt-1.5 h-1.5 w-1.5 rounded-full bg-plum flex-shrink-0"></span>Custom recorded practice</li>
+        </ul>
+      </article>
+    </div>
+  </div>
+
+  <!-- Massage -->
+  <div class="mt-20">
+    <div class="flex items-center gap-3">
+      <span class="h-2.5 w-2.5 rounded-full bg-gold"></span>
+      <p class="text-xs uppercase tracking-[0.25em] text-muted-foreground">Compassionate bodywork</p>
+    </div>
+    <h3 class="mt-2 font-serif text-3xl md:text-4xl">Massage Therapy</h3>
+    <div class="mt-8 grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <article class="flex flex-col rounded-3xl border border-border bg-card p-7 hover:shadow-soft transition">
+        <span class="self-start text-xs uppercase tracking-widest rounded-full px-3 py-1 bg-gold-soft text-foreground">60 min</span>
+        <h4 class="mt-5 font-serif text-2xl leading-tight">Therapeutic Massage · 60 min</h4>
+        <div class="mt-3 font-medium" style="color: color-mix(in oklab, var(--foreground) 85%, transparent)">$110</div>
+        <div class="text-sm text-muted-foreground">60 min · studio</div>
+        <p class="mt-5 leading-relaxed" style="color: color-mix(in oklab, var(--foreground) 80%, transparent)">Skilled, compassionate bodywork to meet pain, stress, and held tension. Pressure and technique tailored to what your body is asking for that day.</p>
+        <ul class="mt-5 space-y-2">
+          <li class="flex gap-3 text-sm" style="color: color-mix(in oklab, var(--foreground) 80%, transparent)"><span class="mt-1.5 h-1.5 w-1.5 rounded-full bg-gold flex-shrink-0"></span>Brief intake & body scan</li>
+          <li class="flex gap-3 text-sm" style="color: color-mix(in oklab, var(--foreground) 80%, transparent)"><span class="mt-1.5 h-1.5 w-1.5 rounded-full bg-gold flex-shrink-0"></span>Swedish & deep-tissue blend</li>
+          <li class="flex gap-3 text-sm" style="color: color-mix(in oklab, var(--foreground) 80%, transparent)"><span class="mt-1.5 h-1.5 w-1.5 rounded-full bg-gold flex-shrink-0"></span>Aftercare guidance</li>
+        </ul>
+      </article>
+      <article class="flex flex-col rounded-3xl border border-border bg-card p-7 hover:shadow-soft transition">
+        <span class="self-start text-xs uppercase tracking-widest rounded-full px-3 py-1 bg-gold-soft text-foreground">90 min</span>
+        <h4 class="mt-5 font-serif text-2xl leading-tight">Therapeutic Massage · 90 min</h4>
+        <div class="mt-3 font-medium" style="color: color-mix(in oklab, var(--foreground) 85%, transparent)">$155</div>
+        <div class="text-sm text-muted-foreground">90 min · studio</div>
+        <p class="mt-5 leading-relaxed" style="color: color-mix(in oklab, var(--foreground) 80%, transparent)">More time to settle in and work thoroughly — ideal for chronic tension, recovery from training, or simply giving yourself a deep exhale.</p>
+        <ul class="mt-5 space-y-2">
+          <li class="flex gap-3 text-sm" style="color: color-mix(in oklab, var(--foreground) 80%, transparent)"><span class="mt-1.5 h-1.5 w-1.5 rounded-full bg-gold flex-shrink-0"></span>Extended bodywork</li>
+          <li class="flex gap-3 text-sm" style="color: color-mix(in oklab, var(--foreground) 80%, transparent)"><span class="mt-1.5 h-1.5 w-1.5 rounded-full bg-gold flex-shrink-0"></span>Focused tension release</li>
+          <li class="flex gap-3 text-sm" style="color: color-mix(in oklab, var(--foreground) 80%, transparent)"><span class="mt-1.5 h-1.5 w-1.5 rounded-full bg-gold flex-shrink-0"></span>Optional aromatherapy</li>
+        </ul>
+      </article>
+      <article class="flex flex-col rounded-3xl border border-border bg-card p-7 hover:shadow-soft transition">
+        <span class="self-start text-xs uppercase tracking-widest rounded-full px-3 py-1 bg-gold-soft text-foreground">One 60-min session monthly</span>
+        <h4 class="mt-5 font-serif text-2xl leading-tight">Wellness Membership</h4>
+        <div class="mt-3 font-medium" style="color: color-mix(in oklab, var(--foreground) 85%, transparent)">$190 / month</div>
+        <div class="text-sm text-muted-foreground">One 60-min session monthly</div>
+        <p class="mt-5 leading-relaxed" style="color: color-mix(in oklab, var(--foreground) 80%, transparent)">Consistent care at a saved rate. Includes one monthly massage plus 15% off any additional sessions, privates, or workshops.</p>
+        <ul class="mt-5 space-y-2">
+          <li class="flex gap-3 text-sm" style="color: color-mix(in oklab, var(--foreground) 80%, transparent)"><span class="mt-1.5 h-1.5 w-1.5 rounded-full bg-gold flex-shrink-0"></span>Monthly 60-min massage</li>
+          <li class="flex gap-3 text-sm" style="color: color-mix(in oklab, var(--foreground) 80%, transparent)"><span class="mt-1.5 h-1.5 w-1.5 rounded-full bg-gold flex-shrink-0"></span>15% off everything else</li>
+          <li class="flex gap-3 text-sm" style="color: color-mix(in oklab, var(--foreground) 80%, transparent)"><span class="mt-1.5 h-1.5 w-1.5 rounded-full bg-gold flex-shrink-0"></span>Priority scheduling</li>
+        </ul>
+      </article>
+    </div>
+  </div>
+
+  <!-- Workshops -->
+  <div class="mt-20">
+    <div class="flex items-center gap-3">
+      <span class="h-2.5 w-2.5 rounded-full bg-moss"></span>
+      <p class="text-xs uppercase tracking-[0.25em] text-muted-foreground">Practice in community</p>
+    </div>
+    <h3 class="mt-2 font-serif text-3xl md:text-4xl">Workshops & Group Classes</h3>
+    <div class="mt-8 grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <article class="flex flex-col rounded-3xl border border-border bg-card p-7 hover:shadow-soft transition">
+        <span class="self-start text-xs uppercase tracking-widest rounded-full px-3 py-1 bg-moss-soft text-foreground">75 min</span>
+        <h4 class="mt-5 font-serif text-2xl leading-tight">Group Yoga Class · Drop-In</h4>
+        <div class="mt-3 font-medium" style="color: color-mix(in oklab, var(--foreground) 85%, transparent)">$22</div>
+        <div class="text-sm text-muted-foreground">75 min · public class</div>
+        <p class="mt-5 leading-relaxed" style="color: color-mix(in oklab, var(--foreground) 80%, transparent)">An all-levels group class blending mindful movement, breath, and a long, intentional rest. Newcomers always welcome.</p>
+        <ul class="mt-5 space-y-2">
+          <li class="flex gap-3 text-sm" style="color: color-mix(in oklab, var(--foreground) 80%, transparent)"><span class="mt-1.5 h-1.5 w-1.5 rounded-full bg-moss flex-shrink-0"></span>All-levels sequencing</li>
+          <li class="flex gap-3 text-sm" style="color: color-mix(in oklab, var(--foreground) 80%, transparent)"><span class="mt-1.5 h-1.5 w-1.5 rounded-full bg-moss flex-shrink-0"></span>Hands-off teaching available</li>
+          <li class="flex gap-3 text-sm" style="color: color-mix(in oklab, var(--foreground) 80%, transparent)"><span class="mt-1.5 h-1.5 w-1.5 rounded-full bg-moss flex-shrink-0"></span>Mats & props provided</li>
+        </ul>
+      </article>
+      <article class="flex flex-col rounded-3xl border border-border bg-card p-7 hover:shadow-soft transition">
+        <span class="self-start text-xs uppercase tracking-widest rounded-full px-3 py-1 bg-moss-soft text-foreground">2.5 hours</span>
+        <h4 class="mt-5 font-serif text-2xl leading-tight">Movement & Nourishment Workshop</h4>
+        <div class="mt-3 font-medium" style="color: color-mix(in oklab, var(--foreground) 85%, transparent)">$65 / person</div>
+        <div class="text-sm text-muted-foreground">2.5 hours · small group</div>
+        <p class="mt-5 leading-relaxed" style="color: color-mix(in oklab, var(--foreground) 80%, transparent)">A half-day gathering that pairs gentle yoga and breathwork with a seasonal, plant-forward shared meal I prepare from my culinary practice.</p>
+        <ul class="mt-5 space-y-2">
+          <li class="flex gap-3 text-sm" style="color: color-mix(in oklab, var(--foreground) 80%, transparent)"><span class="mt-1.5 h-1.5 w-1.5 rounded-full bg-moss flex-shrink-0"></span>Guided practice & breathwork</li>
+          <li class="flex gap-3 text-sm" style="color: color-mix(in oklab, var(--foreground) 80%, transparent)"><span class="mt-1.5 h-1.5 w-1.5 rounded-full bg-moss flex-shrink-0"></span>Seasonal shared meal</li>
+          <li class="flex gap-3 text-sm" style="color: color-mix(in oklab, var(--foreground) 80%, transparent)"><span class="mt-1.5 h-1.5 w-1.5 rounded-full bg-moss flex-shrink-0"></span>Recipe & practice booklet</li>
+        </ul>
+      </article>
+      <article class="flex flex-col rounded-3xl border border-border bg-card p-7 hover:shadow-soft transition">
+        <span class="self-start text-xs uppercase tracking-widest rounded-full px-3 py-1 bg-moss-soft text-foreground">90 min</span>
+        <h4 class="mt-5 font-serif text-2xl leading-tight">Private Workshop · You + Your People</h4>
+        <div class="mt-3 font-medium" style="color: color-mix(in oklab, var(--foreground) 85%, transparent)">From $450</div>
+        <div class="text-sm text-muted-foreground">90 min · up to 8 guests</div>
+        <p class="mt-5 leading-relaxed" style="color: color-mix(in oklab, var(--foreground) 80%, transparent)">Bring your team, your wedding party, your closest friends, or your healing circle. Custom-built around your intention — movement, touch, conversation, or all three.</p>
+        <ul class="mt-5 space-y-2">
+          <li class="flex gap-3 text-sm" style="color: color-mix(in oklab, var(--foreground) 80%, transparent)"><span class="mt-1.5 h-1.5 w-1.5 rounded-full bg-moss flex-shrink-0"></span>Pre-event design call</li>
+          <li class="flex gap-3 text-sm" style="color: color-mix(in oklab, var(--foreground) 80%, transparent)"><span class="mt-1.5 h-1.5 w-1.5 rounded-full bg-moss flex-shrink-0"></span>Custom sequence & playlist</li>
+          <li class="flex gap-3 text-sm" style="color: color-mix(in oklab, var(--foreground) 80%, transparent)"><span class="mt-1.5 h-1.5 w-1.5 rounded-full bg-moss flex-shrink-0"></span>Travel within Asheville included</li>
+        </ul>
+      </article>
+    </div>
+  </div>
+
+  <div class="mt-24 rounded-3xl bg-luminous p-10 md:p-14 text-center">
+    <h3 class="font-serif text-3xl md:text-4xl">Not sure where to begin?</h3>
+    <p class="mt-3 max-w-xl mx-auto" style="color: color-mix(in oklab, var(--foreground) 85%, transparent)">
+      A complimentary 20-minute call to talk through what you're navigating and which offering might fit best.
+    </p>
+    <a href="#contact" class="mt-7 inline-flex rounded-full bg-foreground text-background px-7 py-3 text-sm hover:opacity-90 transition">Start a conversation</a>
+  </div>
+</section>
+
+<!-- Quote -->
+<section class="mx-auto max-w-4xl px-6 py-24 text-center">
+  <p class="font-serif italic text-3xl md:text-4xl leading-snug" style="color: color-mix(in oklab, var(--foreground) 90%, transparent)">
+    "Compassionate care begins with truly listening and observing with curiosity — so we can create a plan that works for you."
+  </p>
+  <p class="mt-6 text-sm uppercase tracking-[0.25em] text-muted-foreground">— Lee Ann</p>
+</section>
+
+<!-- Contact -->
+<section id="contact" class="mx-auto max-w-6xl px-6 py-24">
+  <div class="grid md:grid-cols-2 gap-16 items-start">
+    <div>
+      <p class="text-sm uppercase tracking-[0.25em]" style="color: color-mix(in oklab, var(--primary) 80%, transparent)">Get in touch</p>
+      <h2 class="mt-4 font-serif text-5xl md:text-6xl leading-[1.05]">Let's begin with a conversation.</h2>
+      <p class="mt-6 text-lg text-muted-foreground max-w-md">
+        Send a note about what's bringing you here, and I'll be in touch within two business days to arrange a complimentary 30-minute call.
+      </p>
+      <div class="mt-12 space-y-5" style="color: color-mix(in oklab, var(--foreground) 85%, transparent)">
+        <div>
+          <div class="text-xs uppercase tracking-widest text-muted-foreground">Email</div>
+          <a href="mailto:hello@leeannsong.com" class="mt-1 block font-serif text-xl hover:text-primary transition">hello@leeannsong.com</a>
+        </div>
+        <div>
+          <div class="text-xs uppercase tracking-widest text-muted-foreground">Studio</div>
+          <div class="mt-1 font-serif text-xl">Somerville, Massachusetts</div>
+        </div>
+      </div>
+    </div>
+
+    <form action="https://formsubmit.co/hello@leeannsong.com" method="POST"
+          class="rounded-3xl bg-card border border-border p-8 md:p-10 shadow-soft">
+      <input type="hidden" name="_subject" value="New note from Luminous Living" />
+      <input type="hidden" name="_template" value="table" />
+      <input type="text" name="_honey" style="display:none" />
+      <div class="space-y-5">
+        <label class="block">
+          <span class="text-xs uppercase tracking-widest text-muted-foreground">Your name</span>
+          <div class="mt-2"><input required type="text" name="name" class="input" placeholder="First & last" /></div>
+        </label>
+        <label class="block">
+          <span class="text-xs uppercase tracking-widest text-muted-foreground">Email</span>
+          <div class="mt-2"><input required type="email" name="email" class="input" placeholder="you@example.com" /></div>
+        </label>
+        <label class="block">
+          <span class="text-xs uppercase tracking-widest text-muted-foreground">What's on your heart?</span>
+          <div class="mt-2"><textarea required rows="5" name="message" class="input resize-none" placeholder="Share as little or as much as you'd like…"></textarea></div>
+        </label>
+        <button type="submit" class="w-full rounded-full bg-foreground text-background py-3 text-sm hover:opacity-90 transition">Send note</button>
+      </div>
+    </form>
+  </div>
+</section>
+
+</main>
+
+<footer class="mt-16 border-t border-[color:var(--border)]/60">
+  <div class="mx-auto max-w-6xl px-6 py-12 flex flex-col md:flex-row gap-6 justify-between items-start">
+    <div>
+      <div class="font-serif text-lg">Luminous Living with Lee Ann</div>
+      <p class="text-sm text-muted-foreground mt-2 max-w-sm">Guiding you home to a softer, brighter, more rooted life.</p>
+    </div>
+    <div class="text-sm text-muted-foreground">© <span id="year"></span> Lee Ann · All rights reserved</div>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+  const btn = document.getElementById('about-toggle');
+  const more = document.getElementById('about-more');
+  btn?.addEventListener('click', () => {
+    const open = more.classList.toggle('hidden') === false;
+    btn.querySelector('[data-label-more]').classList.toggle('hidden', open);
+    btn.querySelector('[data-label-less]').classList.toggle('hidden', !open);
+  });
+</script>
+</body>
+</html>
